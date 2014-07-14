@@ -1,12 +1,12 @@
 class TaskOrder
   attr_accessor :jobs
 
-    def initialize(*tasks)
+    def initialize(tasks)
       while tasks.empty?
         tasks = gets.chomp
       end
 
-      @jobs = tasks.to_s
+      @jobs = tasks
       sanitise
     end
 
